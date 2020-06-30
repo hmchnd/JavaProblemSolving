@@ -6,8 +6,8 @@ public class Populate2Darray {
 	     /*
 	      * a is 2d array
 	      * m is max row length
-	      * n is col length
 	      * k is row starting index
+	      * n is col length
 	      * l = col starting index
 	      * */   
 		 
