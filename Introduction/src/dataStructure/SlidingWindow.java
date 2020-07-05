@@ -12,7 +12,7 @@ public class SlidingWindow {
 		int msum = 0;// max sum
 		
 		
-		// Below is the brute force solution and not optimized
+		// Below is the brute force solution and not optimized  time complexity - O(n*k)
 		
 		/*
 		 * for(int i=0;i<n-k;i++) { int wsum= 0; // window sum for(int j=i;j<i+k;j++) {
@@ -30,6 +30,7 @@ public class SlidingWindow {
 		
 		/*  In Sliding window tech first take the *sum of value till the length of window and after that start another 
 		 * loop from the end of window length and add next value of aaray into summ and remove first value as window frame is sliding till length of array/
+		 * Time complaxity = O(n)
 		 */
 		
 		int windowSum=0;
