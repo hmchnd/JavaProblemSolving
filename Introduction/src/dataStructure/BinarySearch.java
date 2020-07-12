@@ -8,7 +8,7 @@ public class BinarySearch {
 		int n = 9;
 		int l=0;
 		int r = n-1;
-		int x=9;
+		int x=1;
 		boolean found = false;
 		
 		while(l<=r) {
