@@ -75,6 +75,39 @@ public class MyLinkedList {
 		
 	}
 	
+void deleteNode (int position) {
+	if(head==null) {
+		return;
+	}
+	
+	
+	Node temp = head;
+	
+	if(position==0) {
+		
+		head = temp.next;
+		return;
+	}
+	
+	for (int i=0; temp!=null && i<position-1; i++) {
+		
+		temp=temp.next;
+		
+		if(temp==null || temp.next==null) {
+			
+			return;
+			
+		}
+		
+	}
+	
+ Node next = temp.next.next;
+temp.next = next;	
+	
+}	
+	
+	
+	
 	
 	
 	
@@ -85,9 +118,11 @@ MyLinkedList myLL = new MyLinkedList();
 myLL.add(12);
 myLL.add(13);
 myLL.add(15);
-
-//myLL.print();
-myLL.GetNth(1);
+myLL.add(18);
+myLL.add(20);
+myLL.deleteNode(4);
+myLL.print();
+//myLL.GetNth(1);
 
 }
 
