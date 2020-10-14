@@ -367,18 +367,64 @@ public class SinglyLinkedList {
 		
 	}
 	
+	/*
+	 * Inser new node into the sorted linked list without changing sorting.
+	 */
+	
+	public ListNode insertInSortedList(ListNode head, int value) {
+		ListNode current = head;
+		ListNode temp = null;
+		ListNode newNode = new ListNode(value);
+		 while(current!=null & current.data<newNode.data) {
+		    	temp = current;
+			 current = current.next;
+			 
+		 }
+		 
+		 newNode.next = current;
+		 temp.next = newNode;
+		 return head;
+		
+		
+	}
+	
+	/*
+	 * Remove the given key from the linked list
+	 * 
+	 */
+	
+	public void removeGivenKeyFromList(ListNode head, int key) {
+		ListNode current = head;
+		ListNode temp = null;
+		
+		while(current!=null && current.data!=key) {
+			temp = current;
+			current = current.next;
+			
+		}
+		
+		if(current==null) {
+			return;
+		}
+		
+		temp.next = current.next;
+		
+	}
+	
+	
+	
 	
 	// Driver Method to run Java class.
 	public static void main(String[] args) {
 		// 10-->8-->1-->11-->null
 		// 10 is head node
 		
-		  ListNode head = new ListNode(10); 
+		  ListNode head = new ListNode(1); 
  		  ListNode second = new ListNode(8); 
-		  ListNode third = new ListNode(1);
+		  ListNode third = new ListNode(10);
 		  ListNode fourth = new ListNode(11);
 		  ListNode fifth = new ListNode(15);
-		  ListNode sixth = new ListNode(15);
+		  ListNode sixth = new ListNode(16);
 		  
 		  head.next = second; 
 		  second.next = third; 
@@ -392,6 +438,13 @@ public class SinglyLinkedList {
 		  list.display(head);
 		  System.out.println();
 		  
+		  list.insertInSortedList(head, 14);
+		  list.display(head);
+		  System.out.println(); 
+		  
+		  list.removeGivenKeyFromList(head, 14);
+		  list.display(head);
+		  System.out.println(); 
 		  //list.removeDuplicate(head);
 		  //list.display(head);
 	
