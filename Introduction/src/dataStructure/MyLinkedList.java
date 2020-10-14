@@ -30,6 +30,8 @@ public class MyLinkedList {
 	
 	
 	
+	
+	
 	 /* Takes index as argument and return data at index*/
      void GetNth(int index) 
     { 
@@ -61,9 +63,9 @@ public class MyLinkedList {
 		
 	}
 	
-	static class Node{
-		int data;
-		Node next;
+	public static class Node{
+		public int data;
+		public Node next;
 		
 		public Node(int data) {
 			
